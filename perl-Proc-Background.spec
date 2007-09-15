@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:    1.08
-Release:    %mkrel 3
+Release:    %mkrel 4
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Generic interface to Unix and Win32 background process management
