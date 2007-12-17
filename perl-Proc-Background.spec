@@ -8,7 +8,6 @@ Group:		Development/Perl
 Summary:    Generic interface to Unix and Win32 background process management
 Source0:    http://search.cpan.org/CPAN/authors/id/B/BZ/BZAJAC/%{realname}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel perl-App-Cache perl-Class-Accessor-Chained 
 BuildArch:      noarch
 
