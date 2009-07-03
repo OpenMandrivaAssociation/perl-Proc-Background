@@ -1,8 +1,8 @@
 %define realname   Proc-Background
 
 Name:		perl-%{realname}
-Version:    1.08
-Release:    %mkrel 6
+Version:    1.09
+Release:    %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Generic interface to Unix and Win32 background process management
