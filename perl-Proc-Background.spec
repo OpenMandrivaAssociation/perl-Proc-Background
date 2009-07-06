@@ -1,16 +1,20 @@
-%define realname   Proc-Background
+%define upstream_name    Proc-Background
+%define upstream_version 1.10
 
-Name:		perl-%{realname}
-Version:    1.09
+Name:		perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
-License:	GPL or Artistic
-Group:		Development/Perl
+
 Summary:    Generic interface to Unix and Win32 background process management
-Source0:    http://search.cpan.org/CPAN/authors/id/B/BZ/BZAJAC/%{realname}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel perl-App-Cache perl-Class-Accessor-Chained 
-BuildArch:      noarch
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org/CPAN/authors/id/B/BZ/BZAJAC/%{upstream_name}-%{upstream_version}.tar.gz
+
+BuildRequires: perl(App::Cache)
+BuildRequires: perl(Class::Accessor::Chained)
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
+BuildArch: noarch
 
 %description
 This is a generic interface for placing processes in the background on both 
@@ -19,7 +23,7 @@ retrieve exit values, and see if background processes still exist.
 
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
