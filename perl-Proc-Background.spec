@@ -1,15 +1,15 @@
 %define upstream_name    Proc-Background
-%define upstream_version 1.10
+%define upstream_version 1.32
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Generic interface to Unix and Win32 background process management
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://search.cpan.org/CPAN/authors/id/B/BZ/BZAJAC/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/nrdvana/perl-proc-background
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NERDVANA/Proc-Background-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
