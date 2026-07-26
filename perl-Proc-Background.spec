@@ -1,15 +1,13 @@
 %define upstream_name    Proc-Background
-%define upstream_version 1.32
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.32
+Release:	2
 
 Summary:	Generic interface to Unix and Win32 background process management
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/nrdvana/perl-proc-background
-Source0:	https://cpan.metacpan.org/authors/id/N/NE/NERDVANA/Proc-Background-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/N/NE/NERDVANA/Proc-Background-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -24,7 +22,7 @@ retrieve exit values, and see if background processes still exist.
 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -50,8 +48,7 @@ rm -rf %{buildroot}%{perl_vendorarch}
 * Mon Jul 06 2009 Jérôme Quelin <jquelin@mandriva.org> 1.100.0-1mdv2010.0
 + Revision: 392715
 - update to 1.10
-- using %%perl_convert_version
-- fixed license field
+- using %1.32 fixed license field
 
 * Fri Jul 03 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.09-1mdv2010.0
 + Revision: 391952
